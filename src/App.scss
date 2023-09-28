@@ -6,14 +6,13 @@
   transition: 0.1s ease;
   font-family: "Montserrat", sans-serif;
 }
-
 :root {
   --primaryColor: #3959d7;
   --primaryColorLight: hsl(
     223,
     100%,
     97%
-  );
+  ); //色相HUe 饱和度Saturation 亮度Lightness
   --primaryColorDark: hsl(216, 58%, 28%);
   --gradientLight: rgb(114, 145, 255);
   --bgColor: hsl(0, 0%, 100%);
@@ -25,6 +24,7 @@
   --inputColor: hsl(330, 12%, 97%);
   --cardColor: hsl(300, 3%, 94%);
   --orangeColor: hsl(25, 84%, 53%);
+
   --biggestFontSize: 2.5rem;
   --h1FontSize: 1.6rem;
   --h2FontSize: 1.25rem;
@@ -39,16 +39,13 @@
   display: flex;
   align-items: center;
 }
-
 .grid {
   display: grid;
   align-items: center;
 }
-
 body {
   overflow-x: hidden;
 }
-
 p {
   font-size: var(--normalFontSize);
   color: var(--primaryColorDark);
@@ -56,61 +53,51 @@ p {
   font-weight: 400;
   line-height: 25px;
 }
-
 html {
   font-size: 90%;
 }
-
 a {
   text-decoration: none;
 }
-
 li {
   list-style: none;
 }
-
 .icon {
   font-size: var(--h2FontSize);
   cursor: pointer;
 }
-
 .icons {
   gap: 0.5rem;
+  .icon {
+    height: 35px;
+    width: 35px;
+    background: var(--primaryColorLight);
+    border-radius: 3px;
+    color: var(--primaryColorDark);
+    padding: 2px;
+    border: 2px solid transparent;
+    &:hover {
+      border: 2px solid var(--shadowColor);
+    }
+  }
 }
-.icons .icon {
-  height: 35px;
-  width: 35px;
-  background: var(--primaryColorLight);
-  border-radius: 3px;
-  color: var(--primaryColorDark);
-  padding: 2px;
-  border: 2px solid transparent;
-}
-.icons .icon:hover {
-  border: 2px solid var(--shadowColor);
-}
-
 .title {
   padding: 0.5rem 0 1rem;
   color: var(--primaryColorDark);
 }
-
 .orangerText {
   color: var(--orangerColor);
   text-transform: capitalize;
   font-weight: 500;
 }
-
 .orangeDot {
   color: var(--orangeColor);
   font-size: var(--h1FontSize);
 }
-
 img {
   height: auto;
   width: 100%;
 }
-
 .btn {
   border: none;
   outline: none;
@@ -119,14 +106,13 @@ img {
   padding: 0.8rem 1.2rem;
   color: var(--whiteColor);
   font-weight: 500;
-  background: linear-gradient(40deg, rgb(114, 255, 255), rgb(42, 73, 198));
+  background: linear-gradient(40deg, rgb(114, 1545, 255), rgb(42, 73, 198));
+  &:hover {
+    transition: 0.3s ease-in-out;
+    background: var(--primaryColor);
+    color: var(--whiteColor);
+  }
 }
-.btn:hover {
-  transition: 0.3s ease-in-out;
-  background: var(--primaryColor);
-  color: var(--whiteColor);
-}
-
 .secTitle {
   display: grid;
   text-align: center;
@@ -135,39 +121,33 @@ img {
   color: var(--primaryColor);
   flex-direction: column;
   width: 100%;
+  h3 {
+    font-size: var(--h1FontSize);
+  }
 }
-.secTitle h3 {
-  font-size: var(--h1FontSize);
-}
-
 .secHeader {
   padding-bottom: 1.5rem;
 }
-
 .section {
   padding: 4rem 0 2rem;
 }
-
 .container {
   padding-left: 1.3rem;
   padding-right: 1.5rem;
 }
 
-::-moz-selection {
-  background: var(--primaryColor);
-  color: var(--whiteColor);
-}
-
+//自定义 用户选择元素时的颜色和背景
 ::selection {
   background: var(--primaryColor);
   color: var(--whiteColor);
 }
-
+//WebKit 提供了浏览器渲染引擎的核心功能，负责解析 HTML、CSS 和 JavaScript，并将它们转换为可视化的网页
+// 用于自定义滚动条的宽度背景颜色
 ::-webkit-scrollbar {
   width: 10px;
   background: var(--primaryColorLight);
 }
-
+// 用于自定义滚动条的滑块部分的样式
 ::-webkit-scrollbar-thumb {
   width: 10px;
   background: var(--primaryColor);
@@ -182,4 +162,4 @@ img {
     width: 75%;
     margin: auto;
   }
-}/*# sourceMappingURL=App.css.map */
+}
