@@ -106,7 +106,8 @@ img {
   padding: 0.8rem 1.2rem;
   color: var(--whiteColor);
   font-weight: 500;
-  background: linear-gradient(40deg, rgb(114, 1545, 255), rgb(42, 73, 198));
+  background: linear-gradient(40deg, rgb(114, 155, 255), rgb(42, 73, 198));
+  //linear-gradient的参数第一个参数为方向40deg to right或者to bottom
   &:hover {
     transition: 0.3s ease-in-out;
     background: var(--primaryColor);

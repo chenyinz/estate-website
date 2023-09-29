@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Handjet:wght@400;500;600;700;800&family=Montserrat:wght@200;400;500;700;900&display=swap");
+
+:root {
+  --primaryColor: #3959d7;
+  --primaryColorLight: hsl(
+    223,
+    100%,
+    97%
+  ); //色相HUe 饱和度Saturation 亮度Lightness
+  --primaryColorDark: hsl(216, 58%, 28%);
+  --gradientLight: rgb(114, 145, 255);
+  --bgColor: hsl(0, 0%, 100%);
+  --formColor: hsl(20, 42%, 87%);
+  --whiteColor: #f5f5f9;
+  --blackColor: hsl(0, 0%, 18%);
+  --blackColorLight: hsl(233, 3%, 51%);
+  --shadowColor: hsl(219, 63%, 95%);
+  --inputColor: hsl(330, 12%, 97%);
+  --cardColor: hsl(300, 3%, 94%);
+  --orangeColor: hsl(25, 84%, 53%);
+
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.6rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+  --boraderRadius: 1rem;
+}
+.Navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  position: fixed;
+  background: transparent;
+  z-index: 1000;
+  //z-index是当使用position时才生效 其值为static则不生效‘
+  //可以用到层叠上下文的嵌套汇中。
+  .iogoDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .icon {
+      //   color: var(--whiteColor);
+      margin-right: 5rem;
+    }
+    span {
+      font-size: var(--h2FontSize);
+      justify-content: center;
+      font-weight: 500;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .menu {
+      position: absolute;
+      width: 70%;
+      top: 8rem;
+      right: 50%;
+      // 对元素进行定位时相对于父元素的右侧进行偏移
+      // 呈现居中效果
+      left: 50%;
+      color: #3959d7;
+      transform: translate(-50%);
+      //用于对元素进行平移操作 在水平方向上向左平移50%的宽度。
+      background: linear-gradient(40deg, rgb(114, 145, 255), rgb(42, 73, 198));
+      padding: 2rem;
+      border-radius: var(--boraderRadius);
+      transition: 0.8s ease-in-out;
+      //ease-in-out 是一开始加速快要接近时减速。
+      //linear 以恒定的速度进行。
+      //ease-in 以缓慢加速的方式，然后匀速
+      //ease-in-out 开始和结束时都以缓慢的速度变化，中间加速。
+      //ease与ease-in-out类似，当稍微加速和减速的时间不同。
+      //cubic-bezier:自定义贝塞尔缓慢函数，通过控制点的位置来定义速度的变化.
+
+      box-shadow: 0 2px 25px -5px var(--shadowColor);
+      //box-shadow参数 水平偏移量、垂直偏移量、模糊半径、扩展半径、阴影颜色。
+      //其中模糊半径越大、阴影越大。扩展半径，表示阴影的大小扩展(阴影部分向外扩展的距离)。正值向外扩散、负值向内扩展。
+    }
+  }
+}
