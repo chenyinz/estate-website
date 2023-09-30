@@ -37,15 +37,14 @@
   background: transparent;
   z-index: 1000;
 }
-.Navbar .iogoDiv {
+.Navbar .logoDiv {
+  color: var(--whiteColor);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.Navbar .iogoDiv .icon {
-  margin-right: 5rem;
-}
-.Navbar .iogoDiv span {
+.Navbar .logoDiv span {
+  color: var(--whiteColor);
   font-size: var(--h2FontSize);
   justify-content: center;
   font-weight: 500;
@@ -54,7 +53,7 @@
   .Navbar .menu {
     position: absolute;
     width: 70%;
-    top: 8rem;
+    top: -100rem;
     right: 50%;
     left: 50%;
     color: #3959d7;
@@ -65,4 +64,53 @@
     transition: 0.8s ease-in-out;
     box-shadow: 0 2px 25px -5px var(--shadowColor);
   }
+  .Navbar .menu li {
+    font-size: var(--h3FontSize);
+    font-weight: 500;
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--whiteColor);
+    cursor: pointer;
+  }
+  .Navbar .menu li:hover {
+    color: var(--primaryColorLight);
+    border-bottom: 1px solid var(--primaryColorLight);
+  }
+}
+.Navbar .menuIcon,
+.Navbar .closeIcon {
+  color: var(--whiteColor);
+  font-size: var(--h1FontSize);
+}
+.Navbar .menuIcon:hover,
+.Navbar .closeIcon:hover {
+  color: var(--primaryColorDark);
+}
+.Navbar .closeIcon {
+  position: absolute;
+  bottom: -35px;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  background: linear-gradient(40deg, rgb(114, 145, 255), rgb(42, 73, 198));
+  padding: 10px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px var(--shadowColor);
+}
+.Navbar .showNavbar {
+  top: 8rem;
+}
+
+.addBackground {
+  background: var(--whiteColor);
+  transition: 0.2s ease-in-out;
+}
+.addBackground .logoDiv .icon,
+.addBackground .logoDiv span {
+  color: var(--primaryColorDark);
+}
+.addBackground .menuIcon {
+  color: var(--primaryColorDark);
 }/*# sourceMappingURL=Navbar.css.map */

@@ -39,15 +39,17 @@
   z-index: 1000;
   //z-index是当使用position时才生效 其值为static则不生效‘
   //可以用到层叠上下文的嵌套汇中。
-  .iogoDiv {
+  .logoDiv {
+    color: var(--whiteColor);
     display: flex;
     align-items: center;
     justify-content: center;
     .icon {
       //   color: var(--whiteColor);
-      margin-right: 5rem;
+      // margin-right: 5rem;
     }
     span {
+      color: var(--whiteColor);
       font-size: var(--h2FontSize);
       justify-content: center;
       font-weight: 500;
@@ -57,7 +59,7 @@
     .menu {
       position: absolute;
       width: 70%;
-      top: 8rem;
+      top: -100rem;
       right: 50%;
       // 对元素进行定位时相对于父元素的右侧进行偏移
       // 呈现居中效果
@@ -79,6 +81,61 @@
       box-shadow: 0 2px 25px -5px var(--shadowColor);
       //box-shadow参数 水平偏移量、垂直偏移量、模糊半径、扩展半径、阴影颜色。
       //其中模糊半径越大、阴影越大。扩展半径，表示阴影的大小扩展(阴影部分向外扩展的距离)。正值向外扩散、负值向内扩展。
+
+      li {
+        font-size: var(--h3FontSize);
+        font-weight: 500;
+        padding: 1rem 0;
+        text-align: center;
+        color: var(--whiteColor);
+        cursor: pointer;
+
+        &:hover {
+          color: var(--primaryColorLight);
+          border-bottom: 1px solid var(--primaryColorLight);
+        }
+      }
     }
+  }
+  .menuIcon,
+  .closeIcon {
+    color: var(--whiteColor);
+    font-size: var(--h1FontSize);
+    &:hover {
+      color: var(--primaryColorDark);
+    }
+  }
+  .closeIcon {
+    position: absolute;
+    bottom: -35px;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    background: linear-gradient(40deg, rgb(114, 145, 255), rgb(42, 73, 198));
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    //呈圆形
+    box-shadow: 0 2px 4px var(--shadowColor);
+  }
+  .showNavbar {
+    top: 8rem;
+    //将样式通过top:-100rem移除至上面然后再出现
+    //主要途径通过useState()来实现
+  }
+}
+.addBackground {
+  background: var(--whiteColor);
+  transition: 0.2s ease-in-out;
+  .logoDiv {
+    .icon,
+    span {
+      color: var(--primaryColorDark);
+      // margin-right: 5rem;
+    }
+  }
+  .menuIcon {
+    color: var(--primaryColorDark);
   }
 }
