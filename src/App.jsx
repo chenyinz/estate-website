@@ -18,9 +18,10 @@ function App() {
             <Popular/>
             <Listing/>
             <About/>
+            {/*  
             <Contact/>
             <Subscribe/>
-            <Footer/>  
+            <Footer/>   */}
         </>
     )
 }

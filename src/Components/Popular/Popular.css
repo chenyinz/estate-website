@@ -1,1 +1,87 @@
-/*# sourceMappingURL=Popular.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Handjet:wght@400;500;600;700;800&family=Montserrat:wght@200;400;500;700;900&display=swap");
+:root {
+  --primaryColor: #3959d7;
+  --primaryColorLight: hsl(
+    223,
+    100%,
+    97%
+  );
+  --primaryColorDark: hsl(216, 58%, 28%);
+  --gradientLight: rgb(114, 145, 255);
+  --bgColor: hsl(0, 0%, 100%);
+  --formColor: hsl(20, 42%, 87%);
+  --whiteColor: #f5f5f9;
+  --blackColor: hsl(0, 0%, 18%);
+  --blackColorLight: hsl(233, 3%, 51%);
+  --shadowColor: hsl(219, 63%, 95%);
+  --inputColor: hsl(330, 12%, 97%);
+  --cardColor: hsl(300, 3%, 94%);
+  --orangeColor: hsl(25, 84%, 53%);
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.6rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+  --boraderRadius: 1rem;
+}
+
+.Popular .secContainer .secHeader {
+  justify-content: space-between;
+}
+.Popular .secContainer .secHeader .icon {
+  transform: translateY(15px);
+}
+.Popular .secContainer .secContent {
+  gap: 1rem;
+}
+.Popular .secContainer .secContent .singleProperty {
+  display: grid;
+  border-radius: var(--borderRadius);
+  padding: 6px;
+  gap: 0.5rem;
+}
+.Popular .secContainer .secContent .singleProperty:hover {
+  box-shadow: 0 4px 6px var(--shadowColor);
+}
+.Popular .secContainer .secContent .singleProperty:hover .imgDiv img {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+.Popular .secContainer .secContent .imgDiv {
+  height: 200px;
+  width: 100%;
+  border-radius: var(--borderRadius);
+  overflow: hidden;
+}
+.Popular .secContainer .secContent .imgDiv img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Popular .secContainer .secContent .info {
+  padding: 0.5rem;
+}
+.Popular .secContainer .secContent .info .price {
+  font-size: var(--h2FontSize);
+  font-weight: 600;
+  color: var(--primaryColorDark);
+}
+.Popular .secContainer .secContent .info .price .digits {
+  opacity: 0.7;
+}
+.Popular .secContainer .secContent .info .name {
+  display: block;
+  padding: 0.5rem 0;
+  font-size: var(--h2FontSize);
+  font-weight: 700;
+  color: var(--primaryColorDark);
+}
+.Popular .secContainer .secContent .info p {
+  color: var(--primaryColorDark);
+  opacity: 0.7;
+  font-size: var(--normalFontSize);
+  line-height: 20px;
+}/*# sourceMappingURL=Popular.css.map */
